@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dhosokaw <dhosokaw@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/19 13:09:32 by dhosokaw          #+#    #+#             */
+/*   Updated: 2023/06/21 17:27:36 by dhosokaw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	int				i;
+	unsigned char	ch;
+	char			*tmp;
+
+	ch = (unsigned char)c;
+	i = 0;
+	tmp = (char *)s;
+	while (*tmp != '\0')
+	{
+		if (*tmp == ch)
+			return (tmp);
+		tmp++;
+	}
+	if (*tmp == ch)
+		return (tmp);
+	return (0);
+}
+//#include <string.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	char str[] = "abc", *p;
+//	int c;
+//
+//	printf("検索文字を入力してください。");
+//	c = getchar();
+//
+//	p = ft_strchr(str, c);
+//	if (p != NULL) {
+//		printf("%cは文字列の%ld番目にあります。\n", c, p-str);
+//		printf("以降の文字列は%sです。\n", p);
+//	}
+//	else
+//		printf("%cは見つかりませんでした\n", c);
+//
+//	return (0);
+//}
