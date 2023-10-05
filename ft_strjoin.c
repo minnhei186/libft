@@ -52,7 +52,6 @@ static void	join(const char *s1, const char *s2, char *new_str)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		all_len;
-	int		i;
 	char	*new_str;
 	char	*tmp;
 
@@ -63,7 +62,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s2 == NULL)
 		return ((char *)s1);
 	all_len = 0;
-	i = 0;
 	all_len = total_len(s1, s2);
 	new_str = (char *)malloc(sizeof(char) * (all_len + 1));
 	if (new_str == NULL)
